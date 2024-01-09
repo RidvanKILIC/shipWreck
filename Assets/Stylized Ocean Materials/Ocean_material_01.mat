@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Addittionalfoam:
         m_Texture: {fileID: 2800000, guid: 3e9621926cb7ef440a683d33de90a485, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -66,7 +66,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FoamTexture:
         m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -82,7 +82,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Noise:
         m_Texture: {fileID: 2800000, guid: d12dc5b6df76c6b42844432e6b9f4005, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -109,11 +109,11 @@ Material:
     - _DstBlend: 0
     - _EdgeFoamLevel: 10.44
     - _EdgeFoamLevelDestination: 17.05
-    - _EdgeFoamPower: 0.63
+    - _EdgeFoamPower: 1
     - _FoamLevel: 1.2
     - _FoamLevelDestination: 2.25
     - _FoamLevel_copy: 4.84
-    - _FoamOpacity: 0.94
+    - _FoamOpacity: 0.79
     - _FoamPower: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -130,9 +130,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaterDepth: 2.09
+    - _WaterDepth: 0.17
     - _WaterOpacity: 0.1
-    - _WaterOrientation: 2.89
+    - _WaterOrientation: 2.1
     - _Whites_opacity: 0.898
     - _Whole_opacity: 0.803
     - _ZWrite: 1

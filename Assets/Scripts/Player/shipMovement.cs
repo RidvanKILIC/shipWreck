@@ -19,12 +19,13 @@ public class shipMovement : MonoBehaviour
     [SerializeField] GameObject _motor;
     [SerializeField] GameObject _front;
 
+    shipAnimator _animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        _animator = GetComponent<shipAnimator>();
         motor = _motor.GetComponent<ParticleSystem>().emission;
-        front = _front.GetComponent<ParticleSystem>().emission;
+        //front = _front.GetComponent<ParticleSystem>().emission;
     }
 
     void FixedUpdate()
@@ -38,9 +39,18 @@ public class shipMovement : MonoBehaviour
             transform.Translate(Vector3.forward * trust * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
             //rb.AddRelativeForce(Vector3.forward * trust * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
         }
-
+        _animator.sailingAnim(Input.GetAxis("Vertical"));
+        _animator.turningAnim(Input.GetAxis("Horizontal"));
+        if (Input.GetAxis("Vertical") != 0)
+        {
+            _animator.idleAnim(true);
+        }
+        else
+        {
+            _animator.idleAnim(false);
+        }
         motor.rateOverDistanceMultiplier = motorFoamMultiplier * Input.GetAxis("Vertical") + motorFoamBase;
-        front.rateOverDistanceMultiplier = frontFoamMultiplier * rb.velocity.magnitude;
+        //front.rateOverDistanceMultiplier = frontFoamMultiplier * rb.velocity.magnitude;
 
 
     }
