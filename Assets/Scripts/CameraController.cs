@@ -4,27 +4,22 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
 
-    public GameObject player;        //Public variable to store a reference to the player game object
-
-
-    private Vector3 offset;            //Private variable to store the offset distance between the player and camera
-    Quaternion offsetRotation;
-    // Use this for initialization
-    void Start()
-    {
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - player.transform.position;
-        offsetRotation = transform.rotation * Quaternion.Inverse(player.transform.rotation);
-    }
-
-    // LateUpdate is called after Update each frame
+    public Transform player;
+    public float distance = 3;
+    public float height = 2;
+    public float shoulderOffset = 2;
+    public bool switchShoulder;
+    public float smoothTime = 0.25f;
+    Vector3 lookTarget;
+    Vector3 lookTargetVelocity;
+    Vector3 currentVelocity;
     void LateUpdate()
     {
-
-        
-        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = Vector3.Lerp(transform.position, player.transform.position + offset, 0.01f);
-        transform.rotation = Quaternion.Slerp(transform.rotation, player.transform.rotation * offsetRotation, 0.01f);
-        //transform.LookAt(player.transform);
+        Vector3 target = player.position + (-player.transform.forward * distance);
+        Vector3 verticalPosition = Vector3.up * height;
+        Vector3 shoulderPosition = switchShoulder ? transform.right * -shoulderOffset : transform.right * shoulderOffset;
+        transform.position = Vector3.SmoothDamp(transform.position, target + shoulderPosition + verticalPosition, ref currentVelocity, smoothTime);
+        lookTarget = Vector3.SmoothDamp(lookTarget, player.position + verticalPosition + shoulderPosition, ref lookTargetVelocity, smoothTime);
+        transform.LookAt(lookTarget);
     }
 }
