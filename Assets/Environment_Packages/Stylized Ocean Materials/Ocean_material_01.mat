@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Addittionalfoam:
-        m_Texture: {fileID: 2800000, guid: 3e9621926cb7ef440a683d33de90a485, type: 3}
+        m_Texture: {fileID: 2800000, guid: f3b8abd6fb15ac741bb1f2df2a4c4f42, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FoamTexture:
-        m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
+        m_Texture: {fileID: 2800000, guid: 45b1622d102323f48bfb2dd3e49c3a81, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -73,7 +73,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 38ab8aca4d89a4c4f93b72ac8d1e3f8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 07983410fefaf1743891d9abfa009206, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -81,7 +81,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
-        m_Texture: {fileID: 2800000, guid: d12dc5b6df76c6b42844432e6b9f4005, type: 3}
+        m_Texture: {fileID: 2800000, guid: d97f9cc246ff39c4296b4b81c18638bc, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -107,8 +107,8 @@ Material:
     - _Depth: 199412
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeFoamLevel: 10.44
-    - _EdgeFoamLevelDestination: 17.05
+    - _EdgeFoamLevel: 3
+    - _EdgeFoamLevelDestination: 4
     - _EdgeFoamPower: 1
     - _FoamLevel: 1.2
     - _FoamLevelDestination: 2.25
@@ -121,7 +121,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NoiseLerpModifier: 0.0501
-    - _Noiselevel: 0.12
+    - _Noiselevel: 0.01
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ShinePower: 4
@@ -132,7 +132,7 @@ Material:
     - _UVSec: 0
     - _WaterDepth: 0.17
     - _WaterOpacity: 0.1
-    - _WaterOrientation: 2.1
+    - _WaterOrientation: 0
     - _Whites_opacity: 0.898
     - _Whole_opacity: 0.803
     - _ZWrite: 1
@@ -148,6 +148,6 @@ Material:
     m_Colors:
     - _Color: {r: 0.7880324, g: 0.7205882, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _WaterColor: {r: 0.68122834, g: 0.7133634, b: 0.9264706, a: 1}
+    - _WaterColor: {r: 0.53755784, g: 0.87135804, b: 0.9433962, a: 1}
     - _node_3975: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -23,7 +23,7 @@ public class shipAnimator : MonoBehaviour
     }
     public void turningAnim(float _hor)
     {
-        Debug.Log("Horizontal value: " + _hor);
+        //Debug.Log("Horizontal value: " + _hor);
         //if (_hor > 0f)
         //{
         //    if (turnObj.transform.rotation.y != 1400f)
