@@ -12,6 +12,7 @@ public class compass : MonoBehaviour
     [SerializeField] List<mark> cmpMarks = new List<mark>();
     List<GameObject> markObjs = new List<GameObject>();
     float compassUnit;
+    [SerializeField]float maxDistance = 200f;
     private void Start()
     {
         compassUnit = compassImg.rectTransform.rect.width / 360f;
@@ -31,6 +32,13 @@ public class compass : MonoBehaviour
         foreach(GameObject _mark in markObjs)
         {
             _mark.GetComponent<RectTransform>().anchoredPosition = getPos(_mark.GetComponent<markContainer>().getMark());
+            float dst = Vector2.Distance(new Vector2(_player.transform.position.x, _player.transform.position.z), _mark.GetComponent<markContainer>().getMark().gameObject.transform.position);
+            Debug.Log("Distance: " + dst);
+            float _scale = 0f;
+            if (dst < maxDistance)
+                _scale = 1f - (dst / maxDistance);
+            _mark.GetComponent<RectTransform>().localScale =Vector3.one * _scale;
+
         }
     }
     public void addMarker(mark mark)
