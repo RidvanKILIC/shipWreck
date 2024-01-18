@@ -12,6 +12,7 @@ public class SteeringWheel : MonoBehaviour, IDragHandler, IPointerDownHandler, I
     private Vector2 center;
     public float MaxSteerAngle = 200f;
     public float ReleaseSpeed = 300f;
+    public float smooth=150f;
     public float OutPut;
     void Update()
     {
@@ -25,7 +26,7 @@ public class SteeringWheel : MonoBehaviour, IDragHandler, IPointerDownHandler, I
             else
                 WheelAngle += DeltaAngle;
         }
-        Wheel.localEulerAngles = new Vector3(0, 0, -MaxSteerAngle * OutPut);
+        Wheel.localEulerAngles =Vector3.Lerp(Wheel.localEulerAngles, new Vector3(0, 0, -MaxSteerAngle * OutPut),smooth);
         OutPut = WheelAngle / MaxSteerAngle;
     }
     public void OnPointerDown(PointerEventData data)

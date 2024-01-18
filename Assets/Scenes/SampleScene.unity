@@ -957,6 +957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compassImg: {fileID: 304123023}
   _player: {fileID: 1531948378}
+  cmpMarkPrefab: {fileID: 8574275544727784536, guid: b7b16a0da8624f844856a2f49c4478c2, type: 3}
+  cmpMarks:
+  - {fileID: 1330683864}
 --- !u!1 &894692902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1455,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a91d0985c88abf041a4b50a2f56c55cc, type: 3}
+--- !u!1 &1330683863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330683865}
+  - component: {fileID: 1330683864}
+  m_Layer: 0
+  m_Name: marketMark
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1330683864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330683863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b22aef83401d24baec64768e50b447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icn: {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
+--- !u!4 &1330683865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330683863}
+  m_LocalRotation: {x: -0, y: -0.80291766, z: -0, w: 0.59609}
+  m_LocalPosition: {x: -15.32, y: 3.964243, z: 14.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1684192507}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1334892769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1782,10 +1830,10 @@ MonoBehaviour:
   _steer: {fileID: 1538173621}
   _windButton: {fileID: 1957990658}
   depthBeforeSubmerged: 1
-  displacementAmount: 3
-  floaterCount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacementAmount: 2
+  floaterCount: 2
+  waterDrag: 6
+  waterAngularDrag: 8
   motorFoamMultiplier: 1
   motorFoamBase: 1
   frontFoamMultiplier: 1
@@ -1875,8 +1923,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wheel: {fileID: 1538173620}
-  MaxSteerAngle: 200
-  ReleaseSpeed: 300
+  MaxSteerAngle: 180
+  ReleaseSpeed: 150
+  smooth: 200
   OutPut: 0
 --- !u!1001 &1538505022
 PrefabInstance:
@@ -2301,6 +2350,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543450653686304711}
+  - {fileID: 1330683865}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

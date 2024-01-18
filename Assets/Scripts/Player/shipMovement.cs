@@ -103,8 +103,8 @@ public class shipMovement : MonoBehaviour
         {
             float displacementMultiplier = Mathf.Clamp01((waveHeight - transform.position.y) / depthBeforeSubmerged) * displacementAmount;
             rb.AddForceAtPosition(new Vector3(0f, Mathf.Abs(Physics.gravity.y) * displacementMultiplier, 0f), transform.position, ForceMode.Acceleration);
-            rb.AddForce(displacementMultiplier * (-rb.velocity/2f) * waterDrag * Time.deltaTime, ForceMode.VelocityChange);
-            rb.AddForce(displacementMultiplier * (-rb.angularVelocity/2f) * waterAngularDrag * Time.deltaTime, ForceMode.VelocityChange);
+            rb.AddForce(displacementMultiplier * (-rb.velocity) * waterDrag * Time.deltaTime, ForceMode.VelocityChange);
+            rb.AddForce(displacementMultiplier * (-rb.angularVelocity) * waterAngularDrag * Time.deltaTime, ForceMode.VelocityChange);
         }
     }
 
